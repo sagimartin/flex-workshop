@@ -1,0 +1,72 @@
+/* Vannak az elemeknek alap beallitott ertekek ezert erdemes style resettel indulni */
+
+/* ELSŐ LÉPÉS */
+/* a csillag mindent kijelöl */
+/* mindenkinek felul tudjuk irni a default ertekeit */
+
+/* CSS reset javasolt mindig elore */
+* {
+    margin: 0;
+    padding: 0;
+
+    font-size: inherit;
+    font-weight: normal;
+
+    box-sizing: border-box;
+}
+
+/* igy konnyebb a formazast megadni, nem kell külön - nem mindig jo a szoveg pl de a paddig margin igen */
+/* Enélkül mindig minden uj elemnek meg kellene adnom a 0 margint */
+
+
+#root{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(181, 189, 201);
+}
+
+header{
+    display: flex;
+    /* a a szulore tesszuk de a child elemekre hat */
+    /* a child- childja az unoka, azzal foglalkozzon az o szuloje */
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* space-around-nál az elem elott kozott mogott kocka mindig egyforma */
+    justify-content: space-evenly;
+    /* a koztuk levő értékek egyformak osszes elem elott es utan */
+
+    /* mi van ha masodlagos tengelyen is helyezni akarom? */
+    align-items: center;
+}
+
+
+
+
+/* GYAKORLÓ A FELADAT ELEJERROL */
+/* #root{
+    width: 100%;
+    height: 100vh;
+    background-color: brown;
+
+    font-size: 40px;
+} */
+
+/* Ettol meg a h1 2x lesz a title-nek, mert alap erteke felülirja */
+/* ezert a csillaghoz be kell irni hogy orokolje - inherit - 8 as sor*/
+
+/* .box {
+    width: 200px;
+    height: 200px;
+
+    padding: 30px;
+    border: 1px solid black;
+    
+    } */
+
+    /* a box-sizinggal adom meg hogy csak erre vonatkozzzon: alap a content-box */
+    /* a border-box a jobbb ezert a csillaghoz rakom*/
+    /* box-sizing: border-box; */
+    /* igy a bordernek adom a 200px -t es igy nem lesz nagyobb */
+
+/* a default beallitas a benne levo tartalmat szabalyozza es folyamat hozzaadodik amit allitunk,  igy 260px lesz */
+
